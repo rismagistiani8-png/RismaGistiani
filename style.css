@@ -1,0 +1,163 @@
+/* --- 1. Pengaturan Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Menggunakan font Poppins agar lebih modern */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f3f7; /* Abu-abu sangat muda untuk background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Membatasi lebar konten agar tidak terlalu melebar */
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* --- 2. Styling Header (Gaya Ungu di Gambar) --- */
+.main-header {
+    background: linear-gradient(135deg, #7411cc 0%, #a83de8 100%); /* Gradasi ungu menarik */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(116, 17, 204, 0.2); /* Efek bayangan */
+    margin-bottom: 25px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+/* --- 3. Styling Navigasi (Gaya di Gambar) --- */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.nav-link {
+    background-color: #333; /* Warna gelap sesuai gambar */
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menambahkan sedikit efek interaktif */
+.nav-link:hover {
+    background-color: #4a4a4a;
+    transform: translateY(-2px);
+}
+
+/* Memberi tanda link yang aktif */
+.nav-link.active {
+    background-color: #a83de8;
+}
+
+/* --- 4. Styling Area Konten --- */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Kotak Putih untuk Konten */
+.content-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan lembut agar menarik */
+    border: 1px solid #f0f0f0;
+}
+
+/* Styling Elemen dalam Kartu */
+.content-card h1 { font-size: 1.8rem; color: #1a1a1a; margin-bottom: 8px; }
+.content-card h2 { font-size: 1.5rem; color: #3a3a3a; margin-bottom: 8px; }
+.content-card h3 { font-size: 1.3rem; color: #5a5a5a; margin-bottom: 15px; }
+
+.content-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Format Teks Khusus */
+.red-text {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.external-link {
+    color: #7411cc;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.external-link:hover {
+    border-bottom: 2px solid #7411cc;
+}
+
+/* Styling Gambar */
+.image-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Membuat placeholder untuk meniru gambar rusak di foto Anda */
+.image-placeholder {
+    max-width: 150px;
+    height: 100px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+/* Memberi tanda 'x' pada placeholder agar mirip gambar rusak */
+.image-placeholder:before {
+    content: "✕";
+    color: #aaa;
+    font-size: 2rem;
+    position: absolute;
+}
+
+.image-caption {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* --- 5. Footer --- */
+.main-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #999;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+}

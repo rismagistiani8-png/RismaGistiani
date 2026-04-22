@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Dasar Web - Lengkap</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #d4e1dc; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: hsl(209, 45%, 44%); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .content-card { margin-bottom: 30px; padding: 20px; border: 1px solid #1a8f9a; border-radius: 8px; }
+        .red-text { color: #f1efef; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table, th, td { border: 1px solid #e7edec; padding: 12px; text-align: left; }
+        th { background-color: #09395a; color: rgb(242, 222, 222); }
+        form { display: grid; gap: 15px; background: #e9eced; padding: 20px; border-radius: 8px; }
+        label { font-weight: 600; display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], input[type="date"], input[type="color"] {
+            width: 100%; padding: 10px; border: 1px solid #c6b8b8; border-radius: 5px; box-sizing: border-box;
+        }
+        button { background-color: #7389ae; color: rgb(236, 240, 240); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #053656; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="main-header">
+            <h1 class="main-title">Praktikum HTML5 Lengkap</h1>
+            <p class="subtitle">Eksplorasi tag Heading, List, Tabel, hingga Form</p>
+        </header>
+
+        <main class="content-area">
+            
+            <section class="content-card">
+                <h2>1. Heading & Format Teks</h2>
+                <p>Ini adalah penggunaan <b>tebal (bold)</b>, <i>miring (italic)</i>, dan <u>garis bawah (underline)</u>.</p>
+                <p class="red-text">Teks ini memiliki warna merah menggunakan class CSS.</p>
+            </section>
+
+            <section class="content-card">
+                <h3>2. Link & Gambar</h3>
+                <p>Coba klik link menuju <a href="https://google.com" target="_blank">Google</a> ini.</p>
+                <div class="image-wrapper">
+                    <img src="image.jpeg" alt="Contoh Gambar" style="max-width: 70%; height: auto;">
+                </div>
+            </section>
+
+            <section class="content-card">
+                <h3>3. Daftar (Lists)</h3>
+                <p><b>Daftar Bullet (Unordered List):</b></p>
+                <ul>
+                    <li>Belajar HTML</li>
+                    <li>Belajar CSS</li>
+                    <li>Belajar JavaScript</li>
+                </ul>
+
+                <p><b>Daftar Angka (Ordered List):</b></p>
+                <ol>
+                    <li>Buka Editor</li>
+                    <li>Tulis Kode</li>
+                    <li>Jalankan di Browser</li>
+                </ol>
+            </section>
+
+            <section class="content-card">
+                <h3>4. Tabel Data</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Materi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML Dasar</td>
+                            <td>Selesai</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CSS Layouting</td>
+                            <td>Proses</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="content-card">
+                <h3>5. Formulir & Validasi</h3>
+                <form id="formPendaftaran">
+                    <div>
+                        <label for="nama">Nama Lengkap (Minimal 3 Karakter):</label>
+                        <input type="text" id="nama" name="nama" required minlength="3" placeholder="Contoh: Budi Santoso">
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="budi@example.com">
+                    </div>
+
+                    <div>
+                        <label for="tgl_lahir">Tanggal Lahir:</label>
+                        <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+                    </div>
+
+                    <div>
+                        <label for="warna_fav">Warna Tema Favorit:</label>
+                        <input type="color" id="warna_fav" name="warna_fav" value="#3498db">
+                    </div>
+
+                    <button type="submit">Kirim Data</button>
+                </form>
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <p align="center">&copy; 2024 Teknik Informatika UMMI</p> 
+        </footer>
+
+        <button onclick="alert('halo informatika')">tombol submit</button>
+
+
+<script src="script.js"
+</body>
+</html>
