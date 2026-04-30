@@ -1,55 +1,59 @@
-Berikut adalah draf README.md yang profesional dan terstruktur untuk repositori GitHub proyek kamu. README ini mencakup penjelasan teknologi yang digunakan, fitur, dan instruksi instalasi.
+Tentu, ini adalah draf file README.md yang bersih, profesional, dan fokus sepenuhnya pada teknis proyek Anda tanpa embel-embel kalimat khas AI. Silakan salin kode di bawah ini:
 
 ---
 
-# 🚀 Praktikum Web Dasar: Belajar HTML5, CSS3, & JavaScript
+# Aplikasi Buku Tamu Digital
 
-Repositori ini berisi proyek pembelajaran fundamental pengembangan web yang mencakup struktur data HTML5, styling modern dengan CSS3, dan logika interaksi menggunakan JavaScript (ES6). Proyek ini dirancang sebagai referensi praktikum teknik informatika.
+Aplikasi web sederhana berbasis PHP dan MySQL untuk mencatat data pengunjung. Proyek ini dibuat untuk memenuhi tugas praktikum mata kuliah Manajemen Basis Data / Pemrograman Web Dasar.
 
-## 📌 Fitur Utama
+## Fitur Utama
+*   Input Data Tamu: Form untuk mencatat nama, email, dan pesan pengunjung.
+*   Keamanan Dasar: Dilengkapi dengan fungsi `htmlspecialchars` dan `strip_tags` untuk mencegah serangan XSS.
+*   Tampilan Responsif: Menggunakan framework Bootstrap 5 agar nyaman diakses melalui perangkat mobile maupun desktop.
+*   Daftar Pengunjung: Menampilkan data tamu secara real-time dari database yang diurutkan berdasarkan waktu terbaru.
 
-Proyek ini mendemonstrasikan implementasi berbagai tag dan fitur web dasar:
+## Persyaratan Sistem
+*   PHP 7.4 atau versi yang lebih baru.
+*   MySQL / MariaDB.
+*   Web Server (XAMPP / Laragon / Apache).
 
-* Struktur HTML5 Lengkap: Penggunaan semantic tags seperti `<header>`, `<main>`, `<section>`, dan `<footer>`.
-* Format Teks & Media: Implementasi berbagai tipe format teks (bold, italic, underline) dan integrasi gambar responsif.
-* Navigasi & List: Menu navigasi interaktif serta penggunaan Ordered List (`<ol>`) dan Unordered List (`<ul>`).
-* Tabel Data: Penyajian data terstruktur menggunakan tag `<table>`, `<thead>`, dan `<tbody>`.
-* Formulir & Validasi: Form input modern dengan berbagai tipe (text, email, date, color) yang dilengkapi validasi sisi klien (client-side validation).
-* Styling Eksternal: Penggunaan CSS modern dengan sistem variabel, gradasi warna, dan box-shadow.
-* Logika JavaScript: Manipulasi DOM, penanganan event (event handling), serta logika pemrograman dasar (variabel, fungsi, dan perulangan).
-
-## 🛠️ Teknologi yang Digunakan
-
-* HTML5 - Struktur konten.
-* CSS3 - Desain dan tata letak responsif (menggunakan Font Google Poppins).
-* JavaScript (ES6) - Logika interaksi dan manipulasi DOM.
-
-## 📂 Struktur File
-
+## Struktur Folder
 ```text
-.
-├── index.html    # File utama (struktur web)
-├── style.css     # File styling (tampilan web)
-├── script.js     # File logika (interaksi JS)
-└── image.jpeg    # Aset gambar (opsional)
+WEB_DASAR/
+├── index.php         # File utama aplikasi
+├── image_f3cab4.png  # Asset gambar header
+└── README.md         # Dokumentasi proyek
 ```
 
-## 🚀 Cara Menjalankan Proyek
+## Langkah Instalasi
 
-1.  Clone Repositori:
-    ```bash
-    git clone https://github.com/rismagistiani8-png/RismaGistiani
+1.  Persiapan Database:
+    *   Buka phpMyAdmin dan buat database baru dengan nama `belajar_php`.
+    *   Jalankan query SQL berikut untuk membuat tabel:
+    ```sql
+    CREATE TABLE tamu (
+        id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        nama VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        pesan TEXT NOT NULL,
+        waktu_input TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
     ```
-2.  Buka File:
-    Cukup buka file `index.html` menggunakan browser pilihan Anda (Chrome, Firefox, atau Edge).
 
-3.  Gunakan Laragon (Opsional):
-    Jika ingin menjalankan via server lokal:
-    * Pindahkan folder ke `C:/laragon/www/`.
-    * Akses melalui `https://github.com/rismagistiani8-png/RismaGistiani'.
+2.  Konfigurasi File:
+    *   Letakkan folder proyek di dalam direktori `htdocs` (XAMPP) atau `www` (Laragon).
+    *   Pastikan file gambar dinamai sesuai dengan referensi di kode, yaitu `image_f3cab4.png`.
 
-## 📸 Tampilan Proyek
-![screenshot website](WEBDASAR/screenshot.website/Tampilan-1.png)
-![screenshot website](WEBDASAR/screenshot.website/Tampilan-2.png)
-![screenshot website](WEBDASAR/screenshot.website/Tampilan-3.png)
-![screenshot website](WEBDASAR/screenshot.website/Tampilan-4.png)
+3.  Menjalankan Aplikasi:
+    *   Aktifkan Apache dan MySQL pada control panel server Anda.
+    *   Akses aplikasi melalui browser di alamat: `http://localhost/WEB_DASAR/index.php`.
+
+## Catatan Teknis
+*   Aplikasi ini menggunakan integrasi Bootstrap via CDN (memerlukan koneksi internet untuk memuat gaya).
+*   Pastikan ekstensi `mysqli` sudah aktif pada konfigurasi PHP Anda.
+
+---
+Teknik Informatika
+Universitas Muhammadiyah Sukabumi (UMMI)
+2026
+```
